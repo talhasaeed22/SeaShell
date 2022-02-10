@@ -1,0 +1,19 @@
+body{
+    /* background: url("../img/main.jpg"); */
+    background-repeat: no-repeat;
+    background-size: 100% 650px;
+}
+
+#logo{
+    font-family: 'Satisfy', cursive;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    font-size: 1rem;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: orange;
+}
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+    color: orange;
+}
