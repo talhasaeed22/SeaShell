@@ -3,7 +3,7 @@ import Roomitems from './Roomitems'
 import './Rooms.css'
 
 function Rooms(props) {
-    const url = 'http://localhost:5000';
+    const url = 'http://localhost:5000'; 
     const [rooms, setRooms] = useState([])
 
     const fetchall = async ()=>{
