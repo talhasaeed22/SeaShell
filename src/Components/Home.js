@@ -15,7 +15,7 @@ const Home = () => {
           <div className="row service-row p-5">
             <h1 style={{textAlign:'center'}} className="pb-2">Our Services</h1>
             <div className="col-md-4 col-sm-12">
-              <div className="home-card card" style={{width: "18rem;"}}>
+              <div className="home-card card" style={{width: "18rem"}}>
                 <img src={breakfast} className="card-img-top" alt="Breakfast"/>
                   <div className="card-body">
                     <h3 className="card-title">Free Breakfast</h3>
@@ -25,7 +25,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-md-4 col-sm-12">
-              <div className="home-card card" style={{width: "18rem;"}}>
+              <div className="home-card card" style={{width: "18rem"}}>
                 <img src={pool} className="card-img-top" alt="Pool"/>
                   <div className="card-body">
                     <h3 className="card-title">Swimming Pool</h3>
