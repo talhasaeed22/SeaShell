@@ -23,7 +23,7 @@
     font-weight: bolder;
 }
 .card-img-top{
-    width: 30%;
+    width: 40%;
     margin: auto;
     padding: 12px;
 }
@@ -43,5 +43,8 @@
 @media (max-width:518px){
     .home-image{
         margin-bottom: 170%;
+    }
+    .card-img-top{
+        width: 55%;
     }
 }

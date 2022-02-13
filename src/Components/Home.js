@@ -9,13 +9,12 @@ const Home = () => {
 
     <>
       <div className='home-image'>
-        {/* <Content/> */}
         <div className="container home-container d-flex flex-column justify-content-center align-items-center">
           <h1 className='p-heading' >Once a year go someplace you've never been before.</h1>
           <div className="row service-row p-5">
             <h1 style={{textAlign:'center'}} className="pb-2">Our Services</h1>
             <div className="col-md-4 col-sm-12">
-              <div className="home-card card" style={{width: "18rem"}}>
+              <div className="home-card card" >
                 <img src={breakfast} className="card-img-top" alt="Breakfast"/>
                   <div className="card-body">
                     <h3 className="card-title">Free Breakfast</h3>
@@ -25,7 +24,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-md-4 col-sm-12">
-              <div className="home-card card" style={{width: "18rem"}}>
+              <div className="home-card card" >
                 <img src={pool} className="card-img-top" alt="Pool"/>
                   <div className="card-body">
                     <h3 className="card-title">Swimming Pool</h3>
@@ -35,7 +34,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-md-4 col-sm-12">
-              <div className="home-card card" style={{width: "18rem"}}>
+              <div className="home-card card" >
                 <img src={mountains} className="card-img-top" alt="Trekking"/>
                   <div className="card-body">
                     <h3 className="card-title">Trekking</h3>
