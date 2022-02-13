@@ -10,6 +10,8 @@ import {
   Route
 } from "react-router-dom";
 import Rooms from './Components/Rooms';
+import Welcome from './Components/Welcome';
+import Signup from './Components/Signup';
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -27,6 +29,10 @@ function App() {
     <Router>
       <Navbar mode = {mode} switchMode={switchMode}/>
         <Routes>
+        <Route exact path="/Welcome" element={<Welcome/>}> 
+        </Route>
+        <Route exact path="/Signup" element={<Signup/>}> 
+        </Route>
         <Route exact path="/" element={<Home/>}> 
         </Route>
         <Route exact path="/Standard" element={<Rooms key="123" category="Standard" />}> 

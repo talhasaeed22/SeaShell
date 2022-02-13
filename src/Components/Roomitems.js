@@ -5,7 +5,7 @@ function Roomitems(props) {
     
     return (
         <>
-            <div className="card" style={{border:'2px solid grey'}} >
+            <div className="card" style={{border:'2px solid grey', borderRadius:"21px"}} >
                 <img src={standard} className="w-50 " style={{paddingTop:'5px', display:'block', margin:'auto'}} alt="..."/>
                     <div className="card-body">
                         <h3 style={{textDecoration:'underline'}} className="card-title">Room No: {props.room.Number}</h3>

@@ -6,7 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 function Navbar(props) {
     let navigate = useNavigate();
     const routeChange = () => {
-        let path = `/About`;
+        let path = `/Welcome`;
         navigate(path);
     }
     const location = useLocation();
@@ -35,9 +35,6 @@ function Navbar(props) {
 
                             <li className="nav-item mx-4">
                                 <Link className={`nav-link ${location.pathname === '/About' ? "active" : ""}`} aria-current="page" to="/About">About</Link>
-                            </li>
-                            <li className="nav-item mx-4">
-                                <Link className={`nav-link ${location.pathname === '/Contactus' ? "active" : ""}`} aria-current="page" to="/Contactus">Contact Us</Link>
                             </li>
                         </ul>
                         <div style={{ fontSize: '1.1rem' }} className={` form-check form-switch text-light mx-3 `}>
