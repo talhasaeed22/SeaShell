@@ -35,7 +35,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-md-4 col-sm-12">
-              <div className="home-card card" style={{width: "18rem;"}}>
+              <div className="home-card card" style={{width: "18rem"}}>
                 <img src={mountains} className="card-img-top" alt="Trekking"/>
                   <div className="card-body">
                     <h3 className="card-title">Trekking</h3>
