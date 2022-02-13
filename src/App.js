@@ -29,11 +29,11 @@ function App() {
         <Routes>
         <Route exact path="/" element={<Home/>}> 
         </Route>
-        <Route exact path="/Standard" element={<Rooms category="Standard" />}> 
+        <Route exact path="/Standard" element={<Rooms key="123" category="Standard" />}> 
         </Route>
-        <Route exact path="/Luxury" element={<Rooms category="Luxury" />}> 
+        <Route exact path="/Luxury" element={<Rooms key="12" category="Luxury" />}> 
         </Route>
-        <Route exact path="/Deluxe" element={<Rooms category="Deluxe" />}> 
+        <Route exact path="/Deluxe" element={<Rooms key="1" category="Deluxe" />}> 
         </Route>
         <Route exact path="/About" element={<About/>}> 
         </Route>

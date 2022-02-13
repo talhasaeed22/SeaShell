@@ -18,7 +18,7 @@ const Home = () => {
               <div className="home-card card" style={{width: "18rem;"}}>
                 <img src={breakfast} className="card-img-top" alt="Breakfast"/>
                   <div className="card-body">
-                    <h5 className="card-title">Free Breakfast</h5>
+                    <h3 className="card-title">Free Breakfast</h3>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     
                   </div>
@@ -28,7 +28,7 @@ const Home = () => {
               <div className="home-card card" style={{width: "18rem;"}}>
                 <img src={pool} className="card-img-top" alt="Pool"/>
                   <div className="card-body">
-                    <h5 className="card-title">Swimming Pool</h5>
+                    <h3 className="card-title">Swimming Pool</h3>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     
                   </div>
@@ -38,7 +38,7 @@ const Home = () => {
               <div className="home-card card" style={{width: "18rem;"}}>
                 <img src={mountains} className="card-img-top" alt="Trekking"/>
                   <div className="card-body">
-                    <h5 className="card-title">Trekking</h5>
+                    <h3 className="card-title">Trekking</h3>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     
                   </div>

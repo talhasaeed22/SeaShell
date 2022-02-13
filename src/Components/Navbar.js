@@ -5,10 +5,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 function Navbar(props) {
     let navigate = useNavigate();
-    const routeChange = () =>{ 
-        let path = `/About`; 
+    const routeChange = () => {
+        let path = `/About`;
         navigate(path);
-      }
+    }
     const location = useLocation();
     return (
         <>
@@ -26,18 +26,13 @@ function Navbar(props) {
                             <li className="nav-item mx-4">
                                 <Link className={`nav-link ${location.pathname === '/' ? "active" : ""}`} aria-current="page" to="/">Home</Link>
                             </li>
-                            <li className="nav-item dropdown">
-                                <Link className="nav-link dropdown-toggle" to="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Rooms
-                                </Link>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><Link className="dropdown-item" to="/Standard">Standard</Link></li>
-                                    <li><hr className="dropdown-divider"/></li>
-                                    <li><Link className="dropdown-item" to="/Luxury">Luxury</Link></li>
-                                    <li><hr className="dropdown-divider"/></li>
-                                    <li><Link className="dropdown-item" to="/Deluxe">Deluxe</Link></li>
-                                </ul>
-                            </li>
+                            <li className="nav-item mx-4"><Link className={`nav-link ${location.pathname === '/Standard' ? "active" : ""}`} aria-current="page" to="/Standard">Standard</Link></li>
+
+                            <li className="nav-item mx-4"><Link className={`nav-link ${location.pathname === '/Luxury' ? "active" : ""}`} aria-current="page" to="/Luxury">Luxury</Link></li>
+
+                            <li className="nav-item mx-4"><Link className={`nav-link ${location.pathname === '/Deluxe' ? "active" : ""}`} aria-current="page" to="/Deluxe">Deluxe</Link></li>
+
+
                             <li className="nav-item mx-4">
                                 <Link className={`nav-link ${location.pathname === '/About' ? "active" : ""}`} aria-current="page" to="/About">About</Link>
                             </li>
@@ -45,7 +40,7 @@ function Navbar(props) {
                                 <Link className={`nav-link ${location.pathname === '/Contactus' ? "active" : ""}`} aria-current="page" to="/Contactus">Contact Us</Link>
                             </li>
                         </ul>
-                        <div style={{fontSize:'1.1rem'}} className={` form-check form-switch text-light mx-3 `}>
+                        <div style={{ fontSize: '1.1rem' }} className={` form-check form-switch text-light mx-3 `}>
                             <input className="form-check-input" style={{ cursor: 'pointer' }} type="checkbox" onClick={props.switchMode} role="switch" id="flexSwitchCheckDefault" />
                             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.mode === 'light' ? 'Enable Dark Mode' : 'Enable Light Mode'}</label>
                         </div>

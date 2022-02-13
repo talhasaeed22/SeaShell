@@ -3,10 +3,9 @@ import Roomitems from './Roomitems'
 import './Rooms.css'
 
 function Rooms(props) {
-
+    const url = 'http://localhost:5000';
     const [rooms, setRooms] = useState([])
 
-    const url = 'http://localhost:5000';
     const fetchall = async ()=>{
         const response = await fetch( `${url}/api/rooms/fetchall` , {
             method:'GET',
@@ -16,14 +15,15 @@ function Rooms(props) {
             }
         });
         const jsonresponse = await response.json();
-        
-        console.log(jsonresponse);
         setRooms(jsonresponse);
     }
-    useEffect(() => {
-      fetchall()
-    }, [])
     
+        useEffect(() => {
+        
+            fetchall();
+        }, [])
+        
+      
     
     return (
         <>
@@ -35,9 +35,9 @@ function Rooms(props) {
             <h1 className='my-4' style={{textAlign:'center', textDecoration:"underline"}}>{props.category} Rooms</h1>
             <div className="container">
                 <div className="row">
-                    {rooms.map(room => {
-                        return <div className="col-md-4 col-sm-12 my-4 ">
-                            <Roomitems category={props.category} room ={room}/>
+                    {rooms.map((room, index)=> {
+                        return <div key={index} className="col-md-4 col-sm-12 my-4 ">
+                            <Roomitems key={index} category={props.category} room ={room}/>
                         </div>
                     })}
                 </div>
