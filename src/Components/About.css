@@ -1,0 +1,13 @@
+.about-container{
+    width: 80%;
+    border: 2px solid grey;
+    padding: 21px;
+    border-radius: 21px;
+}
+.text h1{
+    text-align: center;
+    color: #22d0cc;
+}
+.text p{
+    padding: 12px;
+}

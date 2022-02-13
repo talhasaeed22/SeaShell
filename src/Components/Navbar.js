@@ -1,9 +1,14 @@
 import React from 'react';
 import logo from '../img/logo.png'
 import './Navbar.css';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 function Navbar(props) {
+    let navigate = useNavigate();
+    const routeChange = () =>{ 
+        let path = `/About`; 
+        navigate(path);
+      }
     const location = useLocation();
     return (
         <>
@@ -45,7 +50,7 @@ function Navbar(props) {
                             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.mode === 'light' ? 'Enable Dark Mode' : 'Enable Light Mode'}</label>
                         </div>
                         <div>
-                            <button className="nav-btn">Sign In</button>
+                            <button onClick={routeChange} className="nav-btn">Sign In</button>
                         </div>
                     </div>
                 </div>

@@ -1,3 +1,20 @@
 *{
   font-family: 'Bree Serif', serif;
 }
+.btn{
+  background-color: brown;
+  color: white;
+  border-radius: 21px;
+  width: 50%;
+  border: 1px solid black;
+}
+.btn:hover{
+  background-color: black;
+  color: white;
+}
+.card{
+  transition: all 0.5s ease-in-out;
+}
+.card:hover{
+  transform: scale(1.1);
+}

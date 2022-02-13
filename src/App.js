@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import About from './Components/About';
+import Footer from './Components/Footer';
 import {
   BrowserRouter as Router,
   Routes,
@@ -38,7 +39,7 @@ function App() {
         </Route>
         </Routes>
       </Router>
-      {/* <Footer mode={mode}/> */}
+      <Footer mode={mode}/>
    </>
   );
 }

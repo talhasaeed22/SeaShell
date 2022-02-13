@@ -1,38 +1,43 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Roomitems from './Roomitems'
-// import luxury from '../img/luxury.jpg'
-// import deluxe from '../img/Deluxe.jpeg'
-// import standard from '../img/standard.jpg'
 import './Rooms.css'
 
 function Rooms(props) {
-    const rooms = [
-        23,
-        24,
-        25,
-        25,
-        25,
-        25,
-        25,
-        25,
-        25,
-        25,
-        25,
-    ]
+
+    const [rooms, setRooms] = useState([])
+
+    const url = 'http://localhost:5000';
+    const fetchall = async ()=>{
+        const response = await fetch( `${url}/api/rooms/fetchall` , {
+            method:'GET',
+            headers:{
+                'Content-Type':'application/json',
+                'category':`${props.category}`
+            }
+        });
+        const jsonresponse = await response.json();
+        
+        console.log(jsonresponse);
+        setRooms(jsonresponse);
+    }
+    useEffect(() => {
+      fetchall()
+    }, [])
+    
+    
     return (
         <>
         <div className="header">
-            {/* <img id="image" src={props.category === 'Standard'?standard : props.category === 'Luxury'? "":""} class="img-fluid" alt="..."/> */}
             <div className='image' id={`${props.category === 'Standard'?'standard-image' : props.category === 'Luxury'? "luxury-image":"deluxe-image"}`}>
 
             </div>
         </div>
-            <h1 className='my-4' style={{textAlign:'center'}}>{props.category}</h1>
+            <h1 className='my-4' style={{textAlign:'center', textDecoration:"underline"}}>{props.category} Rooms</h1>
             <div className="container">
                 <div className="row">
-                    {rooms.map(element => {
+                    {rooms.map(room => {
                         return <div className="col-md-4 col-sm-12 my-4 ">
-                            <Roomitems category={props.category}/>
+                            <Roomitems category={props.category} room ={room}/>
                         </div>
                     })}
                 </div>
