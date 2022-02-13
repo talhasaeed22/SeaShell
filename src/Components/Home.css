@@ -34,14 +34,14 @@
 }
 
 @media (max-width:767px){
-    .image{
+    .home-image{
         margin-bottom: 90%;
     }
 }
 
 
 @media (max-width:518px){
-    .image{
+    .home-image{
         margin-bottom: 170%;
     }
 }

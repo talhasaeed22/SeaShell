@@ -20,6 +20,7 @@ function Rooms(props) {
     
         useEffect(() => {
             fetchall();
+            // eslint-disable-next-line
         }, [])
         
       
