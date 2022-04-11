@@ -27,7 +27,7 @@ const Home = () => {
               <div className="home-card card" >
                 <img src={pool} className="card-img-top" alt="Pool"/>
                   <div className="card-body">
-                    <h3 className="card-title">Swimming Pool</h3>
+                    <h3 className="card-title">Swimming Pools</h3>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     
                   </div>
