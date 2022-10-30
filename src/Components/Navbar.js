@@ -9,6 +9,11 @@ function Navbar(props) {
         let path = `/Welcome`;
         navigate(path);
     }
+    const handleLogout = ()=>{
+        localStorage.removeItem('token');
+        localStorage.removeItem('name');
+        navigate('/Signup');
+    }
     const location = useLocation();
     return (
         <>
@@ -42,8 +47,10 @@ function Navbar(props) {
                             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.mode === 'light' ? 'Enable Dark Mode' : 'Enable Light Mode'}</label>
                         </div>
                         <div>
-                            <button onClick={routeChange} className="nav-btn">Sign In</button>
                         </div>
+                        {!localStorage.getItem('token')?<div id='nav-bbtn' className="d-flex">
+                            <button onClick={routeChange} className="nav-btn">Sign In</button>
+                        </div>:<label style={{fontSize:'1.2rem'}} className={`text-${props.mode === 'light' ? 'black' : 'light'}`}> Hello, Welcome Back <button style={{padding:'9px 9px'}} onClick={handleLogout} className="nav-btn mx-2" id="signup">Logout</button> </label>}
                     </div>
                 </div>
             </nav>
